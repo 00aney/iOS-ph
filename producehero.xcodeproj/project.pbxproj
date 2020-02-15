@@ -15,6 +15,7 @@
 		029CF65F23F76F5000D6ACBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029CF65D23F76F5000D6ACBD /* LaunchScreen.storyboard */; };
 		029CF66A23F76F5000D6ACBD /* produceheroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF66923F76F5000D6ACBD /* produceheroTests.swift */; };
 		029CF67523F76F5000D6ACBD /* produceheroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF67423F76F5000D6ACBD /* produceheroUITests.swift */; };
+		029CF68623F7703B00D6ACBD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029CF68523F7703B00D6ACBD /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		029CF67023F76F5000D6ACBD /* produceheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = produceheroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029CF67423F76F5000D6ACBD /* produceheroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = produceheroUITests.swift; sourceTree = "<group>"; };
 		029CF67623F76F5000D6ACBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		029CF68523F7703B00D6ACBD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		029CF64623F76F4E00D6ACBD = {
 			isa = PBXGroup;
 			children = (
+				029CF68523F7703B00D6ACBD /* Default-568h@2x.png */,
 				029CF65123F76F4E00D6ACBD /* producehero */,
 				029CF66823F76F5000D6ACBD /* produceheroTests */,
 				029CF67323F76F5000D6ACBD /* produceheroUITests */,
@@ -99,13 +102,9 @@
 		029CF65123F76F4E00D6ACBD /* producehero */ = {
 			isa = PBXGroup;
 			children = (
-				029CF65223F76F4E00D6ACBD /* AppDelegate.swift */,
-				029CF65423F76F4E00D6ACBD /* SceneDelegate.swift */,
-				029CF65623F76F4E00D6ACBD /* ViewController.swift */,
-				029CF65823F76F4E00D6ACBD /* Main.storyboard */,
-				029CF65B23F76F5000D6ACBD /* Assets.xcassets */,
-				029CF65D23F76F5000D6ACBD /* LaunchScreen.storyboard */,
-				029CF66023F76F5000D6ACBD /* Info.plist */,
+				029CF68223F76FAD00D6ACBD /* Sources */,
+				029CF68323F76FCF00D6ACBD /* Resources */,
+				029CF68423F76FD700D6ACBD /* Supporting Files */,
 			);
 			path = producehero;
 			sourceTree = "<group>";
@@ -126,6 +125,34 @@
 				029CF67623F76F5000D6ACBD /* Info.plist */,
 			);
 			path = produceheroUITests;
+			sourceTree = "<group>";
+		};
+		029CF68223F76FAD00D6ACBD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				029CF65623F76F4E00D6ACBD /* ViewController.swift */,
+				029CF65223F76F4E00D6ACBD /* AppDelegate.swift */,
+				029CF65423F76F4E00D6ACBD /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		029CF68323F76FCF00D6ACBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				029CF65823F76F4E00D6ACBD /* Main.storyboard */,
+				029CF65B23F76F5000D6ACBD /* Assets.xcassets */,
+				029CF65D23F76F5000D6ACBD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		029CF68423F76FD700D6ACBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				029CF66023F76F5000D6ACBD /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029CF65F23F76F5000D6ACBD /* LaunchScreen.storyboard in Resources */,
+				029CF68623F7703B00D6ACBD /* Default-568h@2x.png in Resources */,
 				029CF65C23F76F5000D6ACBD /* Assets.xcassets in Resources */,
 				029CF65A23F76F4E00D6ACBD /* Main.storyboard in Resources */,
 			);
@@ -436,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75AF4P3LCH;
-				INFOPLIST_FILE = producehero/Info.plist;
+				INFOPLIST_FILE = "producehero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75AF4P3LCH;
-				INFOPLIST_FILE = producehero/Info.plist;
+				INFOPLIST_FILE = "producehero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
