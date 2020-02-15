@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BMg-CK-muC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="MPx-4O-Kti">
+            <objects>
+                <viewController id="BMg-CK-muC" customClass="LoginViewController" customModule="producehero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MEt-Ll-RBn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="istockphoto-589415708-1024x1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-Se-a7u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvu-bK-ow0">
+                                <rect key="frame" x="64" y="94" width="286.5" height="55.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="P">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="roduce">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="Helvetica-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="H">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ero">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="Helvetica-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7B-zj-sda">
+                                <rect key="frame" x="60" y="243.5" width="294" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-Io-gFu">
+                                <rect key="frame" x="60" y="297.5" width="294" height="50"/>
+                                <color key="backgroundColor" red="0.33807903528213501" green="0.73908817768096924" blue="0.62351715564727783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3p2-XM-aep"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonDidTap:" destination="BMg-CK-muC" eventType="touchUpInside" id="Mq3-vb-SMQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-je-iw0">
+                                <rect key="frame" x="60" y="189.5" width="294" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vtn-Io-gFu" firstAttribute="leading" secondItem="VuM-81-d6c" secondAttribute="leading" constant="60" id="1Il-MW-HFd"/>
+                            <constraint firstItem="WMZ-je-iw0" firstAttribute="top" secondItem="tvu-bK-ow0" secondAttribute="bottom" constant="40" id="2Wn-YA-LkA"/>
+                            <constraint firstItem="tvu-bK-ow0" firstAttribute="centerX" secondItem="VuM-81-d6c" secondAttribute="centerX" id="9he-XF-Bxk"/>
+                            <constraint firstItem="7gv-Se-a7u" firstAttribute="leading" secondItem="VuM-81-d6c" secondAttribute="leading" id="C8B-7Q-juj"/>
+                            <constraint firstItem="x7B-zj-sda" firstAttribute="leading" secondItem="VuM-81-d6c" secondAttribute="leading" constant="60" id="DRc-pp-DNw"/>
+                            <constraint firstItem="VuM-81-d6c" firstAttribute="trailing" secondItem="WMZ-je-iw0" secondAttribute="trailing" constant="60" id="MEH-8F-itj"/>
+                            <constraint firstItem="7gv-Se-a7u" firstAttribute="top" secondItem="MEt-Ll-RBn" secondAttribute="top" id="Mgq-HM-bfb"/>
+                            <constraint firstItem="VuM-81-d6c" firstAttribute="trailing" secondItem="vtn-Io-gFu" secondAttribute="trailing" constant="60" id="ZIy-td-QFA"/>
+                            <constraint firstItem="VuM-81-d6c" firstAttribute="trailing" secondItem="x7B-zj-sda" secondAttribute="trailing" constant="60" id="bRn-uD-Hfq"/>
+                            <constraint firstAttribute="bottom" secondItem="7gv-Se-a7u" secondAttribute="bottom" id="kXq-tY-w3u"/>
+                            <constraint firstItem="WMZ-je-iw0" firstAttribute="leading" secondItem="VuM-81-d6c" secondAttribute="leading" constant="60" id="me9-Uc-bfk"/>
+                            <constraint firstItem="VuM-81-d6c" firstAttribute="trailing" secondItem="7gv-Se-a7u" secondAttribute="trailing" id="qig-95-bf5"/>
+                            <constraint firstItem="tvu-bK-ow0" firstAttribute="top" secondItem="VuM-81-d6c" secondAttribute="top" constant="50" id="qje-rv-Boh"/>
+                            <constraint firstItem="vtn-Io-gFu" firstAttribute="top" secondItem="x7B-zj-sda" secondAttribute="bottom" constant="20" id="sLI-ff-oA4"/>
+                            <constraint firstItem="x7B-zj-sda" firstAttribute="top" secondItem="WMZ-je-iw0" secondAttribute="bottom" constant="20" id="tmN-Wv-dJY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VuM-81-d6c"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="x7B-zj-sda" id="jPP-g9-MWG"/>
+                        <outlet property="signInButton" destination="vtn-Io-gFu" id="9UG-EE-A11"/>
+                        <outlet property="userIdTextField" destination="WMZ-je-iw0" id="uxo-7w-aco"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnD-R7-eB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="-5.3571428571428568"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="istockphoto-589415708-1024x1024.jpg" width="163.67999267578125" height="245.75999450683594"/>
+    </resources>
+</document>
