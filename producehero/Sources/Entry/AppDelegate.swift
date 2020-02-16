@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = UINavigationController()
     let storyboard = UIStoryboard(name: "RoutesViewController", bundle: nil)
     let routesViewController = storyboard.instantiateInitialViewController() as! RoutesViewController
+    let routeService = RouteService()
+    routesViewController.routeService = routeService
     navigationController.viewControllers = [routesViewController]
     return navigationController
   }

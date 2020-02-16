@@ -11,8 +11,8 @@ import Foundation
 
 // MARK: - Protocol
 
-protocol LoginServiceType {
-  func login(id: String, password: String, completion: @escaping (User?, Error?) -> Void)
+protocol LoginServiceProtocol {
+  func login(id: String, password: String, completionHandler: @escaping (User?, Error?) -> Void)
 }
   
 
@@ -32,18 +32,18 @@ final class LoginService {
 }
 
 
-// MARK: - LoginServiceType
+// MARK: - LoginServiceProtocol
 
-extension LoginService: LoginServiceType {
-  func login(id: String, password: String, completion: @escaping (User?, Error?) -> Void) {
+extension LoginService: LoginServiceProtocol {
+  func login(id: String, password: String, completionHandler: @escaping (User?, Error?) -> Void) {
     let users = LoginService.users.filter { (user) -> Bool in
       return user.userId == id && user.password == password
     }
     
     if users.count > 0 {
-      completion(users[0], nil)
+      completionHandler(users[0], nil)
     } else {
-      completion(nil, LoginServiceError.invalidUser)
+      completionHandler(nil, LoginServiceError.invalidUser)
     }
   }
 }

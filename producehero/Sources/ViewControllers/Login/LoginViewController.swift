@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
   // MARK: Properties
   
-  var loginService: LoginService?
+  var loginService: LoginServiceProtocol!
   var from: RoutesViewController?
   
   
@@ -30,8 +30,6 @@ class LoginViewController: UIViewController {
 
     setupUI()
     setupBinding()
-    
-    
   }
   
   private func setupUI() {
@@ -44,8 +42,7 @@ class LoginViewController: UIViewController {
   }
 
   @IBAction func signInButtonDidTap(_ sender: Any) {
-    guard let loginService = loginService,
-      let userId = userIdTextField.text,
+    guard let userId = userIdTextField.text,
       let password = passwordTextField.text else { return }
     
     loginService.login(id: userId, password: password) { [weak self] (user, error) in
