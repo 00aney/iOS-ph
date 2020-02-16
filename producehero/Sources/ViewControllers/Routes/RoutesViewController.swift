@@ -43,7 +43,10 @@ final class RoutesViewController: UIViewController {
         
         if let routes = routes {
           self.routes = routes
-          self.tableView.reloadData()
+          DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.tableView.reloadData()
+          }
         }
       })
     }
@@ -78,8 +81,12 @@ final class RoutesViewController: UIViewController {
     let loginViewController = LoginScene(loginService: LoginService(), from: self).initialViewController()
     loginViewController.modalPresentationStyle = .fullScreen
     loginViewController.modalTransitionStyle = .crossDissolve
-    present(loginViewController, animated: animated) {
-      loginViewController.modalTransitionStyle = .coverVertical
+    
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else { return }
+      self.present(loginViewController, animated: animated) {
+        loginViewController.modalTransitionStyle = .coverVertical
+      }
     }
   }
 }

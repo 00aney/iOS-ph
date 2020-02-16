@@ -70,13 +70,17 @@ extension RoutePlanViewController: UITableViewDataSource {
     let routePlan = routePlans[indexPath.row]
     cell.configure(routePlan)
     // TODO: button handler
-    cell.buttonHandler = { [weak self] (cell) in
+    cell.mapButtonHandler = { [weak self] (cell) in
       guard let self = self else { return }
       
       let address = self.routePlans[indexPath.row].address
-      let isSigned = self.routePlans[indexPath.row].isSigned
-      
-      print("@@@@")
+        .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+      if let address = address,
+        let url = URL(string: "http://maps.apple.com/?address=\(address)") {
+        UIApplication.shared.open(url)
+      } else {
+        print("failed to open url, it was nil.")
+      }
     }
     // TODO: UIColor+producehero
   

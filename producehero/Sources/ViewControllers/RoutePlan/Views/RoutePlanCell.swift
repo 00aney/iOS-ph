@@ -14,7 +14,7 @@ final class RoutePlanCell: UITableViewCell {
   
   var isSigned: Bool = false
   
-  var buttonHandler: ((UITableViewCell) -> Void)?
+  var mapButtonHandler: ((UITableViewCell) -> Void)?
   
   
   // MARK: UI
@@ -59,7 +59,7 @@ final class RoutePlanCell: UITableViewCell {
   
   @IBAction func buttonDidTap(_ sender: Any) {
     guard !isSigned else { return }
-    buttonHandler?(self)
+    mapButtonHandler?(self)
   }
   
 }
