@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
   // MARK: Properties
   
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
   }
   
   private func setupUI() {
-    signInButton.layer.cornerRadius = 4
+    signInButton.layer.cornerRadius = 6
   }
   
   private func setupBinding() {

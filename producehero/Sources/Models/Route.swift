@@ -12,5 +12,5 @@ struct Route {
   let id: String
   let name: String
   let userId: String
-  let plans: [RoutePlan]
+  let routePlans: [RoutePlan]
 }

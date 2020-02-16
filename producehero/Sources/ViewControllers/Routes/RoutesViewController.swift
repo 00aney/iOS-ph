@@ -8,14 +8,13 @@
 
 import UIKit
 
-class RoutesViewController: UIViewController {
+final class RoutesViewController: UIViewController {
 
   // MARK: Properties
   
   var routeService: RouteServiceProtocol!
   
-  var isSigned: Bool = false;
-  var user: User?
+  var user: User? = nil
   var routes: [Route] = []
   
   
@@ -32,7 +31,7 @@ class RoutesViewController: UIViewController {
     setupUI()
     setupBinding()
     
-    if !isSigned {
+    if user == nil {
       presentLoginViewController(animated: true)
     }
   }
@@ -42,7 +41,6 @@ class RoutesViewController: UIViewController {
       routeService.getRoutes(userId: user.id, completionHandler: { [weak self] (routes, error) in
         guard let self = self else { return }
         
-        // TODO: reload tableView
         if let routes = routes {
           self.routes = routes
           self.tableView.reloadData()
@@ -92,10 +90,13 @@ class RoutesViewController: UIViewController {
 extension RoutesViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: false)
-    let item = routes[indexPath.row]
     
-    // TODO: navigate next page
-    print(item)
+    guard let navigationController = navigationController else { return }
+    
+    let item = routes[indexPath.row]
+
+    let routePlanViewController = RoutePlanScene(routePlans: item.routePlans, routeName: item.name).initialViewController()
+    navigationController.pushViewController(routePlanViewController, animated: true)
   }
 }
 

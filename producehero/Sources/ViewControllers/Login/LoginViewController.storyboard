@@ -55,7 +55,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-Io-gFu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-Io-gFu" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
                                 <rect key="frame" x="60" y="297.5" width="294" height="50"/>
                                 <color key="backgroundColor" red="0.33807903528213501" green="0.73908817768096924" blue="0.62351715564727783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>

@@ -23,7 +23,7 @@ final class RouteService {
   // MARK: Mock data
   
   private static let routes = [
-    Route(id: "b6456760-1df9-4c6e-991b-9b55f0e66519", name: "Toronto", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", plans: [
+    Route(id: "b6456760-1df9-4c6e-991b-9b55f0e66519", name: "Toronto", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", routePlans: [
       RoutePlan(id: "27999097-04f5-42eb-8f3e-699a2cbab63e",
                 name: "Pizza Inc.",
                 address: "100 Yonge St, Toronto",
@@ -53,8 +53,8 @@ final class RouteService {
                 isSigned: false,
                 signImage: nil),
     ]),
-    Route(id: "29f583d5-7239-4461-96ec-41969816ad73", name: "Waterloo", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", plans: []),
-    Route(id: "2488a16d-99ff-4fa7-a9bf-b8280bb01fb8", name: "Guelph", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", plans: []),
+    Route(id: "29f583d5-7239-4461-96ec-41969816ad73", name: "Waterloo", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", routePlans: []),
+    Route(id: "2488a16d-99ff-4fa7-a9bf-b8280bb01fb8", name: "Guelph", userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6", routePlans: []),
   ]
   
   private enum LoginServiceError: Error {
