@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="OrderItemCell" customModule="producehero" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Item 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2t-P1-qup">
+                        <rect key="frame" x="10" y="18.5" width="104" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDQ-2C-hmQ" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                        <rect key="frame" x="230" y="25.5" width="80" height="29"/>
+                        <color key="backgroundColor" red="0.33423334360122681" green="0.73516565561294556" blue="0.61959552764892578" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="G27-fS-W5V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <state key="normal" title="Adjust">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="adjustButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nz3-Lw-Erx"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-4E-v0L" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                        <rect key="frame" x="64" y="44" width="50" height="20"/>
+                        <color key="backgroundColor" red="0.33423334360000001" green="0.73516565560000002" blue="0.61959552760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0Kf-xw-Vdv"/>
+                            <constraint firstAttribute="width" constant="50" id="RkY-8A-6ID"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="x 10">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="adjustButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gex-Cd-hFp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG8-Nu-2lf" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                        <rect key="frame" x="10" y="44" width="60" height="20"/>
+                        <color key="backgroundColor" red="0.74607497453689575" green="0.77217614650726318" blue="0.79215759038925171" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4EU-5j-fwo"/>
+                            <constraint firstAttribute="width" constant="60" id="6Gd-W4-Myg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="1 Kg">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="adjustButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="peo-Qr-ATQ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AG8-Nu-2lf" firstAttribute="top" secondItem="K2t-P1-qup" secondAttribute="bottom" constant="4" id="RDX-9j-TNF"/>
+                    <constraint firstItem="h5k-4E-v0L" firstAttribute="top" secondItem="AG8-Nu-2lf" secondAttribute="top" id="Rn8-JP-0tC"/>
+                    <constraint firstItem="KDQ-2C-hmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uye-lX-wEo"/>
+                    <constraint firstItem="K2t-P1-qup" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hLa-er-8oX"/>
+                    <constraint firstItem="K2t-P1-qup" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="j6d-vK-SaK"/>
+                    <constraint firstItem="AG8-Nu-2lf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lZa-Gy-2Tc"/>
+                    <constraint firstAttribute="trailing" secondItem="KDQ-2C-hmQ" secondAttribute="trailing" constant="10" id="qdC-lZ-CAN"/>
+                    <constraint firstItem="h5k-4E-v0L" firstAttribute="leading" secondItem="AG8-Nu-2lf" secondAttribute="trailing" constant="-6" id="vf3-CD-lJP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adjustButton" destination="AG8-Nu-2lf" id="T4o-El-d04"/>
+                <outlet property="nameLabel" destination="K2t-P1-qup" id="Omp-8E-sga"/>
+                <outlet property="quantityButton" destination="h5k-4E-v0L" id="g31-c1-iLA"/>
+                <outlet property="unitButton" destination="AG8-Nu-2lf" id="kaO-tz-aLp"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -47,8 +47,6 @@ final class RoutePlanCell: UITableViewCell {
     addressLabel.text = routePlan.address
     isSigned = routePlan.isSigned
     
-    print(isSigned)
-    
     let buttonTitle = isSigned ? "Signed" : "Map"
     button.setTitle(buttonTitle, for: .normal)
     button.backgroundColor = isSigned ? UIColor.ProduceHero.secondary : UIColor.ProduceHero.primary

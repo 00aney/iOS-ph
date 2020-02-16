@@ -33,6 +33,8 @@
 		029CF6AF23F8FDEE00D6ACBD /* RoutePlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029CF6AD23F8FDEE00D6ACBD /* RoutePlanCell.xib */; };
 		029CF6B323F9972800D6ACBD /* UIColor+ProduceHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6B223F9972800D6ACBD /* UIColor+ProduceHero.swift */; };
 		029CF6B523F9A28D00D6ACBD /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6B423F9A28D00D6ACBD /* ShadowButton.swift */; };
+		029CF6B923F9BCB200D6ACBD /* OrderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6B723F9BCB200D6ACBD /* OrderItemCell.swift */; };
+		029CF6BA23F9BCB200D6ACBD /* OrderItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		029CF6AD23F8FDEE00D6ACBD /* RoutePlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutePlanCell.xib; sourceTree = "<group>"; };
 		029CF6B223F9972800D6ACBD /* UIColor+ProduceHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ProduceHero.swift"; sourceTree = "<group>"; };
 		029CF6B423F9A28D00D6ACBD /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		029CF6B723F9BCB200D6ACBD /* OrderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemCell.swift; sourceTree = "<group>"; };
+		029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,7 @@
 		029CF6A123F8F2AB00D6ACBD /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				029CF6B623F9BC9600D6ACBD /* Views */,
 				029CF6A223F8F2BF00D6ACBD /* OrderViewController.swift */,
 				029CF6A423F8F2CE00D6ACBD /* OrderViewController.storyboard */,
 			);
@@ -292,6 +297,15 @@
 				029CF6B223F9972800D6ACBD /* UIColor+ProduceHero.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		029CF6B623F9BC9600D6ACBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				029CF6B723F9BCB200D6ACBD /* OrderItemCell.swift */,
+				029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +417,7 @@
 				029CF65F23F76F5000D6ACBD /* LaunchScreen.storyboard in Resources */,
 				029CF6AA23F8F74200D6ACBD /* RoutePlanViewController.storyboard in Resources */,
 				029CF68623F7703B00D6ACBD /* Default-568h@2x.png in Resources */,
+				029CF6BA23F9BCB200D6ACBD /* OrderItemCell.xib in Resources */,
 				029CF68E23F86B7000D6ACBD /* LoginViewController.storyboard in Resources */,
 				029CF65C23F76F5000D6ACBD /* Assets.xcassets in Resources */,
 				029CF69023F86CA600D6ACBD /* istockphoto-589415708-1024x1024.jpg in Resources */,
@@ -440,6 +455,7 @@
 				029CF6A823F8F73500D6ACBD /* RoutePlanViewController.swift in Sources */,
 				029CF6AE23F8FDEE00D6ACBD /* RoutePlanCell.swift in Sources */,
 				029CF69C23F8BC5F00D6ACBD /* RouteService.swift in Sources */,
+				029CF6B923F9BCB200D6ACBD /* OrderItemCell.swift in Sources */,
 				029CF6B323F9972800D6ACBD /* UIColor+ProduceHero.swift in Sources */,
 				029CF69E23F8BCE300D6ACBD /* RoutePlan.swift in Sources */,
 				029CF6A023F8C14900D6ACBD /* OrderItem.swift in Sources */,

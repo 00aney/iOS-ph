@@ -52,7 +52,11 @@ final class RoutePlanViewController: UIViewController {
 extension RoutePlanViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    // TODO:
+    
+    guard let navigationController = navigationController else { return }
+    let orderViewController = OrderScene(orderItems: routePlans[indexPath.row].orderItems).initialViewController()
+    
+    navigationController.pushViewController(orderViewController, animated: true)
   }
 }
 

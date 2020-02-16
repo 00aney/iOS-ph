@@ -20,7 +20,7 @@ final class LoginViewController: UIViewController {
   
   @IBOutlet weak var userIdTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  @IBOutlet weak var signInButton: UIButton!
+  @IBOutlet weak var signInButton: ShadowButton!
   
   
   // MARK: View Life Cycle
@@ -34,6 +34,7 @@ final class LoginViewController: UIViewController {
   
   private func setupUI() {
     signInButton.layer.cornerRadius = 6
+    signInButton.backgroundColor = UIColor.ProduceHero.signInButton
   }
   
   private func setupBinding() {

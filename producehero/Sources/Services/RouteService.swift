@@ -48,7 +48,14 @@ final class RouteService {
       RoutePlan(id: "0e11f427-7f97-48a1-8ebf-cd2708d3b8a7",
                 name: "Tech Ichi",
                 address: "1020 Bloor St, Toronto",
-                orderItems: [],
+                orderItems: [
+                  OrderItem(name: "Order Item 1", weight: 1, unit: "Kg", quantity: 10),
+                  OrderItem(name: "Order Item 2", weight: 1, unit: "Kg", quantity: 20),
+                  OrderItem(name: "Order Item 3", weight: 1, unit: "Kg", quantity: 30),
+                  OrderItem(name: "Order Item 4", weight: 1, unit: "Kg", quantity: 40),
+                  OrderItem(name: "Order Item 5", weight: 1, unit: "Kg", quantity: 50),
+                  OrderItem(name: "Order Item 6", weight: 1, unit: "Kg", quantity: 60)
+                ],
                 userId: "c9368bf6-eb9a-44e7-9d6e-73d159adc2c6",
                 isSigned: false,
                 signImage: nil),

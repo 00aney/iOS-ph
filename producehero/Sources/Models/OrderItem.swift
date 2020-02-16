@@ -9,7 +9,8 @@
 import Foundation
 
 struct OrderItem {
-  let weight: Double
+  let name: String
+  let weight: Int
   let unit: String
   let quantity: Int
 }

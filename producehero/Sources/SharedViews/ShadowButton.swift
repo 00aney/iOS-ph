@@ -24,12 +24,16 @@ class ShadowButton: UIButton {
   
   private func setupButton() {
     // Shadow and Radius
-    layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+    layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
     layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
     layer.shadowOpacity = 1.0
     layer.shadowRadius = 0.0
     layer.masksToBounds = false
-    layer.cornerRadius = 4.0
+    layer.cornerRadius = 6
+  }
+  
+  func setShadowColor(_ color: UIColor) {
+    layer.shadowColor = color.cgColor
   }
 
 }

@@ -51,7 +51,7 @@ final class RoutesViewController: UIViewController {
       })
     }
   }
-  
+
   private func setupUI() {
     navigationItem.title = "Routes"
     

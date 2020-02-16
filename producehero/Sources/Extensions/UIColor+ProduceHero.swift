@@ -20,6 +20,18 @@ extension UIColor {
       return UIColor.init(red: 156/255, green: 167/255, blue: 177/255, alpha: 1)
     }
     
+    static var signInButton: UIColor {
+      return UIColor.init(red: 82/255, green: 188/255, blue: 159/255, alpha: 1)
+    }
+    
+    static var primaryShadow: UIColor {
+      return UIColor.init(red: 155/255, green: 160/255, blue: 165/255, alpha: 1)
+    }
+    
+    static var secondaryShadow: UIColor {
+      return UIColor.init(red: 68/255, green: 160/255, blue: 130/255, alpha: 1)
+    }
+    
   }
   
 }
