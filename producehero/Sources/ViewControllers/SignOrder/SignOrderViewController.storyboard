@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="POS-Qg-BZQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Order View Controller-->
+        <scene sceneID="lG4-m4-w44">
+            <objects>
+                <viewController id="POS-Qg-BZQ" customClass="SignOrderViewController" customModule="producehero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Uk-Fy-8HM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6U-Ng-36t" customClass="CanvasView" customModule="producehero" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="784"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-KJ-yko" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                                <rect key="frame" x="20" y="60" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.92418056726455688" green="0.26024669408798218" blue="0.15313830971717834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Dze-kG-0V9"/>
+                                    <constraint firstAttribute="height" constant="30" id="o3P-fl-ARk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonDidTap:" destination="POS-Qg-BZQ" eventType="touchUpInside" id="cuT-nb-ca2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-hh-ynz">
+                                <rect key="frame" x="189" y="60" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonDidTap:" destination="POS-Qg-BZQ" eventType="touchUpInside" id="Yv6-yQ-8fX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EU4-f0-kAG" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                                <rect key="frame" x="314" y="60" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.3380790353" green="0.73908817770000002" blue="0.62351715559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hfs-C0-ZeG"/>
+                                    <constraint firstAttribute="width" constant="80" id="VOB-zT-dzx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonDidTap:" destination="POS-Qg-BZQ" eventType="touchUpInside" id="Qdb-4N-wmW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 355.76" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAC-yz-l2G">
+                                <rect key="frame" x="50" y="784" width="344" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="1vN-Uh-Jdm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <color key="textColor" red="0.33423334360000001" green="0.73516565560000002" blue="0.61959552760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-bH-Pff">
+                                <rect key="frame" x="20" y="784" width="30" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="28M-KN-Pfx"/>
+                                    <constraint firstAttribute="height" constant="52" id="pdi-4q-XBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.3421754837" green="0.74693304299999996" blue="0.6313604116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inv-Ng-05t">
+                                <rect key="frame" x="20" y="836" width="374" height="6"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="zrF-GT-qio"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="inv-Ng-05t" secondAttribute="trailing" constant="20" id="1Ri-uM-g6J"/>
+                            <constraint firstItem="oxW-W1-9HM" firstAttribute="bottom" secondItem="inv-Ng-05t" secondAttribute="bottom" constant="20" id="AFi-81-rlf"/>
+                            <constraint firstItem="EU4-f0-kAG" firstAttribute="top" secondItem="oxW-W1-9HM" secondAttribute="top" constant="16" id="E5m-WR-qOJ"/>
+                            <constraint firstItem="JYR-KJ-yko" firstAttribute="top" secondItem="oxW-W1-9HM" secondAttribute="top" constant="16" id="ED8-a2-dlO"/>
+                            <constraint firstItem="g4d-hh-ynz" firstAttribute="top" secondItem="oxW-W1-9HM" secondAttribute="top" constant="16" id="G4q-KY-r8F"/>
+                            <constraint firstItem="B6U-Ng-36t" firstAttribute="top" secondItem="2Uk-Fy-8HM" secondAttribute="top" id="HDY-a4-Sgt"/>
+                            <constraint firstItem="inv-Ng-05t" firstAttribute="top" secondItem="JAC-yz-l2G" secondAttribute="bottom" id="KPc-J1-ssu"/>
+                            <constraint firstItem="B6U-Ng-36t" firstAttribute="leading" secondItem="oxW-W1-9HM" secondAttribute="leading" id="Lah-3b-gg4"/>
+                            <constraint firstItem="oxW-W1-9HM" firstAttribute="trailing" secondItem="B6U-Ng-36t" secondAttribute="trailing" id="Q5R-sM-0Nw"/>
+                            <constraint firstItem="inv-Ng-05t" firstAttribute="top" secondItem="f4W-bH-Pff" secondAttribute="bottom" id="QVn-kG-OeG"/>
+                            <constraint firstItem="f4W-bH-Pff" firstAttribute="leading" secondItem="inv-Ng-05t" secondAttribute="leading" id="RnF-bz-jQb"/>
+                            <constraint firstItem="inv-Ng-05t" firstAttribute="leading" secondItem="2Uk-Fy-8HM" secondAttribute="leading" constant="20" id="SrC-5v-uE7"/>
+                            <constraint firstItem="JAC-yz-l2G" firstAttribute="leading" secondItem="f4W-bH-Pff" secondAttribute="trailing" id="YjY-xw-ght"/>
+                            <constraint firstItem="JAC-yz-l2G" firstAttribute="trailing" secondItem="inv-Ng-05t" secondAttribute="trailing" id="ahL-1t-urE"/>
+                            <constraint firstItem="JYR-KJ-yko" firstAttribute="leading" secondItem="oxW-W1-9HM" secondAttribute="leading" constant="20" id="cVs-nl-ft5"/>
+                            <constraint firstItem="JAC-yz-l2G" firstAttribute="top" secondItem="B6U-Ng-36t" secondAttribute="bottom" id="i0b-uH-0eC"/>
+                            <constraint firstItem="oxW-W1-9HM" firstAttribute="trailing" secondItem="EU4-f0-kAG" secondAttribute="trailing" constant="20" id="l7k-6z-rDg"/>
+                            <constraint firstItem="g4d-hh-ynz" firstAttribute="centerX" secondItem="oxW-W1-9HM" secondAttribute="centerX" id="lnX-Cq-Cl4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oxW-W1-9HM"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="JYR-KJ-yko" id="CzB-Ee-Eq8"/>
+                        <outlet property="canvasView" destination="B6U-Ng-36t" id="zY0-Xy-iad"/>
+                        <outlet property="clearButton" destination="g4d-hh-ynz" id="KOA-8G-cua"/>
+                        <outlet property="doneButton" destination="EU4-f0-kAG" id="6NO-EW-lvM"/>
+                        <outlet property="totalPriceLabel" destination="JAC-yz-l2G" id="iFE-CJ-ckQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdW-YU-EaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="22"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,7 +12,11 @@ final class OrderViewController: UIViewController {
 
   // MARK: Properties
   
+  var routePlanId: String = ""
+  var isSigned = false
   var orderItems: [OrderItem] = []
+  
+  var signCompletionHandler: ((_ routePlanId: String, _ sigendImage: UIImage) -> Void)?
   
   
   // MARK: UI
@@ -34,8 +38,10 @@ final class OrderViewController: UIViewController {
   }
   
   private func setupBinding() {
-    let signButton = UIBarButtonItem(title: "Sign", style: .plain, target: self, action: #selector(signButtonDidTap(_:)))
-    navigationItem.rightBarButtonItem = signButton
+    if !isSigned {
+      let signButton = UIBarButtonItem(title: "Sign", style: .plain, target: self, action: #selector(signButtonDidTap(_:)))
+      navigationItem.rightBarButtonItem = signButton
+    }
     
     tableView.delegate = self
     tableView.dataSource = self
@@ -48,7 +54,21 @@ final class OrderViewController: UIViewController {
   // MARK: Actions
   
   @objc func signButtonDidTap(_ sender: AnyObject) {
-    print("sign button did tap")
+    let totalPrice = calculateTotalPrice(orderItems: orderItems)
+    let SignOrderViewController = SignOrderScene(totalPrice: totalPrice).initialViewController()
+    
+    // MARK: signCompletionHandler
+    SignOrderViewController.signCompletionHandler = { [weak self] (image) in
+      guard let self = self else { return }
+      guard let signCompletionHandler = self.signCompletionHandler else { return }
+      signCompletionHandler(self.routePlanId, image)
+    }
+    SignOrderViewController.modalPresentationStyle = .fullScreen
+    present(SignOrderViewController, animated: true, completion: nil)
+  }
+  
+  private func calculateTotalPrice(orderItems: [OrderItem]) -> Double {
+    return orderItems.reduce(0.0) { $0 + ($1.price * Double($1.quantity)) }
   }
   
 }
@@ -74,10 +94,11 @@ extension OrderViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "OrderItemCell", for: indexPath) as! OrderItemCell
     
-    cell.configure(orderItems[indexPath.row])
+    cell.configure(orderItems[indexPath.row], isSigned: isSigned)
     cell.adjustButtonHandler = { [weak self] (cell) in
       guard let self = self else { return }
       print("adjust button did tap", self)
+      // TODO:
     }
     
     return cell
@@ -92,11 +113,15 @@ extension OrderViewController: UITableViewDataSource {
 
 struct OrderScene {
   
+  let routePlanId: String
+  let isSigned: Bool
   let orderItems: [OrderItem]
   
-  func initialViewController() -> UIViewController {
+  func initialViewController() -> OrderViewController {
     let storyboard = UIStoryboard(name: "OrderViewController", bundle: nil)
     let viewController = storyboard.instantiateInitialViewController() as! OrderViewController
+    viewController.routePlanId = routePlanId
+    viewController.isSigned = isSigned
     viewController.orderItems = orderItems
     return viewController
   }

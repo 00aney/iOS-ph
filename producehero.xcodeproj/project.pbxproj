@@ -35,6 +35,9 @@
 		029CF6B523F9A28D00D6ACBD /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6B423F9A28D00D6ACBD /* ShadowButton.swift */; };
 		029CF6B923F9BCB200D6ACBD /* OrderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6B723F9BCB200D6ACBD /* OrderItemCell.swift */; };
 		029CF6BA23F9BCB200D6ACBD /* OrderItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */; };
+		029CF6BF23F9FB9500D6ACBD /* SignOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6BE23F9FB9500D6ACBD /* SignOrderViewController.swift */; };
+		029CF6C123F9FBB900D6ACBD /* SignOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029CF6C023F9FBB900D6ACBD /* SignOrderViewController.storyboard */; };
+		029CF6C323FA0DBC00D6ACBD /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6C223FA0DBC00D6ACBD /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		029CF6B423F9A28D00D6ACBD /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		029CF6B723F9BCB200D6ACBD /* OrderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemCell.swift; sourceTree = "<group>"; };
 		029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemCell.xib; sourceTree = "<group>"; };
+		029CF6BE23F9FB9500D6ACBD /* SignOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOrderViewController.swift; sourceTree = "<group>"; };
+		029CF6C023F9FBB900D6ACBD /* SignOrderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignOrderViewController.storyboard; sourceTree = "<group>"; };
+		029CF6C223FA0DBC00D6ACBD /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,7 @@
 				029CF68923F85D3A00D6ACBD /* Routes */,
 				029CF6A623F8F72400D6ACBD /* RoutePlan */,
 				029CF6A123F8F2AB00D6ACBD /* Order */,
+				029CF6BD23F9FB6B00D6ACBD /* SignOrder */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				029CF6B423F9A28D00D6ACBD /* ShadowButton.swift */,
+				029CF6C223FA0DBC00D6ACBD /* CanvasView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -306,6 +314,15 @@
 				029CF6B823F9BCB200D6ACBD /* OrderItemCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		029CF6BD23F9FB6B00D6ACBD /* SignOrder */ = {
+			isa = PBXGroup;
+			children = (
+				029CF6BE23F9FB9500D6ACBD /* SignOrderViewController.swift */,
+				029CF6C023F9FBB900D6ACBD /* SignOrderViewController.storyboard */,
+			);
+			path = SignOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +432,7 @@
 				029CF6A523F8F2CE00D6ACBD /* OrderViewController.storyboard in Resources */,
 				029CF6AF23F8FDEE00D6ACBD /* RoutePlanCell.xib in Resources */,
 				029CF65F23F76F5000D6ACBD /* LaunchScreen.storyboard in Resources */,
+				029CF6C123F9FBB900D6ACBD /* SignOrderViewController.storyboard in Resources */,
 				029CF6AA23F8F74200D6ACBD /* RoutePlanViewController.storyboard in Resources */,
 				029CF68623F7703B00D6ACBD /* Default-568h@2x.png in Resources */,
 				029CF6BA23F9BCB200D6ACBD /* OrderItemCell.xib in Resources */,
@@ -454,9 +472,11 @@
 				029CF65323F76F4E00D6ACBD /* AppDelegate.swift in Sources */,
 				029CF6A823F8F73500D6ACBD /* RoutePlanViewController.swift in Sources */,
 				029CF6AE23F8FDEE00D6ACBD /* RoutePlanCell.swift in Sources */,
+				029CF6C323FA0DBC00D6ACBD /* CanvasView.swift in Sources */,
 				029CF69C23F8BC5F00D6ACBD /* RouteService.swift in Sources */,
 				029CF6B923F9BCB200D6ACBD /* OrderItemCell.swift in Sources */,
 				029CF6B323F9972800D6ACBD /* UIColor+ProduceHero.swift in Sources */,
+				029CF6BF23F9FB9500D6ACBD /* SignOrderViewController.swift in Sources */,
 				029CF69E23F8BCE300D6ACBD /* RoutePlan.swift in Sources */,
 				029CF6A023F8C14900D6ACBD /* OrderItem.swift in Sources */,
 				029CF69A23F8B32E00D6ACBD /* Route.swift in Sources */,

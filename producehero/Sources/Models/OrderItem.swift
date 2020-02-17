@@ -13,4 +13,5 @@ struct OrderItem {
   let weight: Int
   let unit: String
   let quantity: Int
+  let price: Double
 }

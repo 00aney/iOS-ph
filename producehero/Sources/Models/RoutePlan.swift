@@ -16,6 +16,6 @@ struct RoutePlan {
   let address: String
   let orderItems: [OrderItem]
   let userId: String
-  let isSigned: Bool
-  let signImage: UIImage?
+  var isSigned: Bool
+  var signImage: UIImage?
 }

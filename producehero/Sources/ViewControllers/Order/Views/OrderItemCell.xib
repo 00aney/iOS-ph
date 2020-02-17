@@ -80,7 +80,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="adjustButton" destination="AG8-Nu-2lf" id="T4o-El-d04"/>
+                <outlet property="adjustButton" destination="KDQ-2C-hmQ" id="fcI-2b-Hzc"/>
                 <outlet property="nameLabel" destination="K2t-P1-qup" id="Omp-8E-sga"/>
                 <outlet property="quantityButton" destination="h5k-4E-v0L" id="g31-c1-iLA"/>
                 <outlet property="unitButton" destination="AG8-Nu-2lf" id="kaO-tz-aLp"/>

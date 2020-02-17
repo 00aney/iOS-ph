@@ -40,10 +40,12 @@ final class OrderItemCell: UITableViewCell {
   
   // MARK: Configuring
   
-  func configure(_ orderItem: OrderItem) {
+  func configure(_ orderItem: OrderItem, isSigned: Bool) {
     nameLabel.text = orderItem.name
     unitButton.setTitle("\(orderItem.weight) \(orderItem.unit)", for: .normal)
     quantityButton.setTitle("x\(orderItem.quantity)", for: .normal)
+    
+    adjustButton.isHidden = isSigned
   }
   
   

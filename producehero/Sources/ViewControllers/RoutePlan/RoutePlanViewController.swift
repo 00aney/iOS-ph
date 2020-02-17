@@ -43,7 +43,6 @@ final class RoutePlanViewController: UIViewController {
     tableView.register(routePlanCell, forCellReuseIdentifier: "RoutePlanCell")
   }
   
-  
 }
 
 
@@ -54,7 +53,29 @@ extension RoutePlanViewController: UITableViewDelegate {
     tableView.deselectRow(at: indexPath, animated: true)
     
     guard let navigationController = navigationController else { return }
-    let orderViewController = OrderScene(orderItems: routePlans[indexPath.row].orderItems).initialViewController()
+    let routePlan = routePlans[indexPath.row]
+    let orderViewController = OrderScene(
+      routePlanId: routePlan.id,
+      isSigned: routePlan.isSigned,
+      orderItems: routePlan.orderItems
+    ).initialViewController()
+    
+    // MARK: signCompletionHandler
+    orderViewController.signCompletionHandler = { [weak self] (routePlanId, signImage) in
+      guard let self = self else { return }
+      
+      if let index = self.routePlans.firstIndex(where: { $0.id == routePlanId }) {
+        var routePlan = self.routePlans[index]
+        routePlan.signImage = signImage
+        routePlan.isSigned = true
+        self.routePlans[index] = routePlan
+        self.navigationController?.popToViewController(self, animated: true)
+        
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      }
+    }
     
     navigationController.pushViewController(orderViewController, animated: true)
   }
@@ -73,7 +94,6 @@ extension RoutePlanViewController: UITableViewDataSource {
     
     let routePlan = routePlans[indexPath.row]
     cell.configure(routePlan)
-    // TODO: button handler
     cell.mapButtonHandler = { [weak self] (cell) in
       guard let self = self else { return }
       
@@ -86,8 +106,7 @@ extension RoutePlanViewController: UITableViewDataSource {
         print("failed to open url, it was nil.")
       }
     }
-    // TODO: UIColor+producehero
-  
+    
     return cell
   }
   
