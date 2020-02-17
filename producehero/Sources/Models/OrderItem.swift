@@ -9,9 +9,22 @@
 import Foundation
 
 struct OrderItem {
+  let id: String
   let name: String
   let weight: Int
   let unit: String
   let quantity: Int
   let price: Double
+}
+
+
+extension OrderItem {
+  init(orderItem: OrderItem, quantity: Int?) {
+     id = orderItem.id
+     name = orderItem.name
+     weight = orderItem.weight
+     unit = orderItem.unit
+     self.quantity = quantity ?? orderItem.quantity
+     price = orderItem.price
+  }
 }

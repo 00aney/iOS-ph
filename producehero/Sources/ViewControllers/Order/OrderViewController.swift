@@ -61,6 +61,10 @@ final class OrderViewController: UIViewController {
     SignOrderViewController.signCompletionHandler = { [weak self] (image) in
       guard let self = self else { return }
       guard let signCompletionHandler = self.signCompletionHandler else { return }
+      
+      self.isSigned = true
+      
+      // TODO: pass new routePlan instance
       signCompletionHandler(self.routePlanId, image)
     }
     SignOrderViewController.modalPresentationStyle = .fullScreen
@@ -95,10 +99,16 @@ extension OrderViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "OrderItemCell", for: indexPath) as! OrderItemCell
     
     cell.configure(orderItems[indexPath.row], isSigned: isSigned)
+    // MARK: adjustButtonHandler
     cell.adjustButtonHandler = { [weak self] (cell) in
       guard let self = self else { return }
-      print("adjust button did tap", self)
-      // TODO:
+      
+      let editOrderItemViewController = EditOrderItemScene(orderItem: self.orderItems[indexPath.row]).initialViewController()
+      editOrderItemViewController.saveButtonHandler = { [weak self] (orderItem) in  
+        // TODO: replace order item
+        print(orderItem)
+      }
+      self.navigationController?.pushViewController(editOrderItemViewController, animated: true)
     }
     
     return cell
