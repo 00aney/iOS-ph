@@ -17,7 +17,7 @@ final class OrderViewController: UIViewController {
   var orderItems: [OrderItem] = []
   
   var signCompletionHandler: ((_ routePlanId: String, _ sigendImage: UIImage) -> Void)?
-  
+  var orderChangeHandler: ((_ routePlanId: String, _ orderItems: [OrderItem]) -> Void)?
   
   // MARK: UI
   
@@ -104,9 +104,30 @@ extension OrderViewController: UITableViewDataSource {
       guard let self = self else { return }
       
       let editOrderItemViewController = EditOrderItemScene(orderItem: self.orderItems[indexPath.row]).initialViewController()
-      editOrderItemViewController.saveButtonHandler = { [weak self] (orderItem) in  
-        // TODO: replace order item
-        print(orderItem)
+      editOrderItemViewController.saveButtonHandler = { [weak self] (orderItem) in
+        guard let self = self else { return }
+        if let index = self.orderItems.firstIndex(where: { $0.id == orderItem.id }) {
+          let newOrderItem = OrderItem(orderItem: orderItem)
+          self.orderItems.remove(at: index)
+          self.orderItems.insert(newOrderItem, at: index)
+        }
+        self.orderChangeHandler?(self.routePlanId, self.orderItems)
+        
+        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      }
+      editOrderItemViewController.deleteHandler = { [weak self] (orderItemId) in
+        guard let self = self else { return }
+        let newOrderItems = self.orderItems.filter { $0.id != orderItemId }
+        self.orderItems = newOrderItems
+        self.orderChangeHandler?(self.routePlanId, self.orderItems)
+        
+        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
       }
       self.navigationController?.pushViewController(editOrderItemViewController, animated: true)
     }

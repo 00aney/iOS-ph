@@ -40,6 +40,8 @@
 		029CF6C323FA0DBC00D6ACBD /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6C223FA0DBC00D6ACBD /* CanvasView.swift */; };
 		029CF6C623FA450300D6ACBD /* EditOrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF6C523FA450300D6ACBD /* EditOrderItemViewController.swift */; };
 		029CF6C823FA451B00D6ACBD /* EditOrderItemViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029CF6C723FA451B00D6ACBD /* EditOrderItemViewController.storyboard */; };
+		02F509BA23FAFB4100BBB06C /* QuantityCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F509B923FAFB4100BBB06C /* QuantityCounterView.swift */; };
+		02F509BC23FAFB5300BBB06C /* QuantityCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F509BB23FAFB5300BBB06C /* QuantityCounterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		029CF6C223FA0DBC00D6ACBD /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		029CF6C523FA450300D6ACBD /* EditOrderItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOrderItemViewController.swift; sourceTree = "<group>"; };
 		029CF6C723FA451B00D6ACBD /* EditOrderItemViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrderItemViewController.storyboard; sourceTree = "<group>"; };
+		02F509B923FAFB4100BBB06C /* QuantityCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityCounterView.swift; sourceTree = "<group>"; };
+		02F509BB23FAFB5300BBB06C /* QuantityCounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuantityCounterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,10 +337,20 @@
 		029CF6C423FA44CE00D6ACBD /* EditOrderItem */ = {
 			isa = PBXGroup;
 			children = (
+				02F509B823FAF67900BBB06C /* Views */,
 				029CF6C523FA450300D6ACBD /* EditOrderItemViewController.swift */,
 				029CF6C723FA451B00D6ACBD /* EditOrderItemViewController.storyboard */,
 			);
 			path = EditOrderItem;
+			sourceTree = "<group>";
+		};
+		02F509B823FAF67900BBB06C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02F509B923FAFB4100BBB06C /* QuantityCounterView.swift */,
+				02F509BB23FAFB5300BBB06C /* QuantityCounterView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +462,7 @@
 				029CF6AF23F8FDEE00D6ACBD /* RoutePlanCell.xib in Resources */,
 				029CF65F23F76F5000D6ACBD /* LaunchScreen.storyboard in Resources */,
 				029CF6C123F9FBB900D6ACBD /* SignOrderViewController.storyboard in Resources */,
+				02F509BC23FAFB5300BBB06C /* QuantityCounterView.xib in Resources */,
 				029CF6AA23F8F74200D6ACBD /* RoutePlanViewController.storyboard in Resources */,
 				029CF68623F7703B00D6ACBD /* Default-568h@2x.png in Resources */,
 				029CF6BA23F9BCB200D6ACBD /* OrderItemCell.xib in Resources */,
@@ -485,6 +500,7 @@
 				029CF69823F8904B00D6ACBD /* User.swift in Sources */,
 				029CF65723F76F4E00D6ACBD /* RoutesViewController.swift in Sources */,
 				029CF65323F76F4E00D6ACBD /* AppDelegate.swift in Sources */,
+				02F509BA23FAFB4100BBB06C /* QuantityCounterView.swift in Sources */,
 				029CF6A823F8F73500D6ACBD /* RoutePlanViewController.swift in Sources */,
 				029CF6AE23F8FDEE00D6ACBD /* RoutePlanCell.swift in Sources */,
 				029CF6C323FA0DBC00D6ACBD /* CanvasView.swift in Sources */,

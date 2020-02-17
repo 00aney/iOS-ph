@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuantityCounterView" customModule="producehero" customModuleProvider="target">
+            <connections>
+                <outlet property="countLabel" destination="npl-WQ-Hkb" id="2yP-r5-q6G"/>
+                <outlet property="minusButton" destination="mcz-Dh-xFe" id="sSi-dz-YFw"/>
+                <outlet property="plusButton" destination="G9n-oc-BeI" id="iWR-cm-wAZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npl-WQ-Hkb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-Dh-xFe" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                    <color key="backgroundColor" red="0.33423334360000001" green="0.73516565560000002" blue="0.61959552760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mcz-Dh-xFe" secondAttribute="height" multiplier="1:1" id="hM3-9J-0sz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="minusButtonDidTap:" destination="-1" eventType="touchUpInside" id="Jtw-MT-gIz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9n-oc-BeI" customClass="ShadowButton" customModule="producehero" customModuleProvider="target">
+                    <rect key="frame" x="356" y="0.0" width="58" height="58"/>
+                    <color key="backgroundColor" red="0.3421754837" green="0.74693304299999996" blue="0.6313604116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="G9n-oc-BeI" secondAttribute="height" multiplier="1:1" id="tYJ-ar-q2d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="plusButtonDidTap:" destination="-1" eventType="touchUpInside" id="3ZF-cM-V6J"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mcz-Dh-xFe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6dp-BK-SV6"/>
+                <constraint firstAttribute="bottom" secondItem="mcz-Dh-xFe" secondAttribute="bottom" constant="2" id="B0j-ch-vjU"/>
+                <constraint firstItem="npl-WQ-Hkb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HM4-ah-ZUh"/>
+                <constraint firstAttribute="trailing" secondItem="npl-WQ-Hkb" secondAttribute="trailing" id="Q4u-LJ-ukJ"/>
+                <constraint firstAttribute="bottom" secondItem="npl-WQ-Hkb" secondAttribute="bottom" id="U7b-Gf-Sdh"/>
+                <constraint firstAttribute="bottom" secondItem="G9n-oc-BeI" secondAttribute="bottom" constant="2" id="XJf-gR-8S8"/>
+                <constraint firstAttribute="trailing" secondItem="G9n-oc-BeI" secondAttribute="trailing" id="bi8-kU-diV"/>
+                <constraint firstItem="npl-WQ-Hkb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dUR-EJ-kz1"/>
+                <constraint firstItem="mcz-Dh-xFe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s0c-ze-jiy"/>
+                <constraint firstItem="G9n-oc-BeI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sf5-6E-JO1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-118.52678571428571"/>
+        </view>
+    </objects>
+</document>

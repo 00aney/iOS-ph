@@ -14,13 +14,14 @@ final class EditOrderItemViewController: UIViewController {
   
   var orderItem: OrderItem?
   var saveButtonHandler: ((OrderItem) -> Void)?
+  var deleteHandler: ((_ orderItemId: String) -> Void)?
   
   
   // MARK: UI
   
   @IBOutlet weak var itemNameLabel: UILabel!
-  // item quantity view
   @IBOutlet weak var deleteButton: ShadowButton!
+  @IBOutlet weak var quantityCounterView: QuantityCounterView!
   
   
   // MARK: View Life Cycle
@@ -41,11 +42,16 @@ final class EditOrderItemViewController: UIViewController {
       itemNameLabel.text = ""
     }
     
+    if let orderItem = orderItem {
+      quantityCounterView.setInitialCount(count: orderItem.quantity)
+    }
   }
   
   private func setupBinding() {
-     let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonDidTap(_:)))
-     navigationItem.rightBarButtonItem = saveButton
+    let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonDidTap(_:)))
+    navigationItem.rightBarButtonItem = saveButton
+    
+    quantityCounterView.delegate = self
   }
   
 
@@ -53,15 +59,24 @@ final class EditOrderItemViewController: UIViewController {
   
   @objc func saveButtonDidTap(_ sender: AnyObject) {
     guard let orderItem = orderItem else { return }
-    
     saveButtonHandler?(orderItem)
   }
   
   @IBAction func deleteButtonDidTap(_ sender: Any) {
-    
+    guard let orderItem = orderItem else { return }
+    deleteHandler?(orderItem.id)
   }
-  
-  // TODO: quantity change handler
+}
+
+
+// MARK: - QuantityCounterViewDelegate
+
+extension EditOrderItemViewController: QuantityCounterViewDelegate {
+  func quantityCounterView(_ quantityCounterView: QuantityCounterView, countChanged: Int) {
+    guard let orderItem = orderItem else { return }
+    let newOrderItem = OrderItem(orderItem: orderItem, quantity: countChanged)
+    self.orderItem = newOrderItem
+  }
 }
 
 

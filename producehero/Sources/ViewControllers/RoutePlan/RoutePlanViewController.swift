@@ -65,11 +65,23 @@ extension RoutePlanViewController: UITableViewDelegate {
       guard let self = self else { return }
       
       if let index = self.routePlans.firstIndex(where: { $0.id == routePlanId }) {
-        var routePlan = self.routePlans[index]
-        routePlan.signImage = signImage
-        routePlan.isSigned = true
-        self.routePlans[index] = routePlan
+        let routePlan = RoutePlan(routePlan: self.routePlans[index], isSigned: true, signImage: signImage)
+        self.routePlans.remove(at: index)
+        self.routePlans.insert(routePlan, at: index)
+        
         self.navigationController?.popToViewController(self, animated: true)
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      }
+    }
+    
+    orderViewController.orderChangeHandler = { [weak self] (routePlanId, orderItems) in
+      guard let self = self else{ return }
+      if let index = self.routePlans.firstIndex(where: { $0.id == routePlanId }) {
+        let routePlan = RoutePlan(routePlan: self.routePlans[index], orderItems: orderItems)
+        self.routePlans.remove(at: index)
+        self.routePlans.insert(routePlan, at: index)
         
         DispatchQueue.main.async {
           self.tableView.reloadData()

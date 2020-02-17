@@ -38,14 +38,33 @@
                                     <action selector="deleteButtonDidTap:" destination="QV1-Q1-k1b" eventType="touchUpInside" id="MYM-cF-mBv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l76-wF-qlB">
+                                <rect key="frame" x="14" y="244" width="87.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.24694782495498657" green="0.2390676736831665" blue="0.24705797433853149" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-1x-dNb" customClass="QuantityCounterView" customModule="producehero" customModuleProvider="target">
+                                <rect key="frame" x="10" y="274.5" width="394" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="jqe-DV-io8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="KUL-22-w8j" firstAttribute="top" secondItem="zrK-S7-u87" secondAttribute="top" constant="30" id="1vF-BG-LhT"/>
+                            <constraint firstItem="Qpl-1x-dNb" firstAttribute="top" secondItem="l76-wF-qlB" secondAttribute="bottom" constant="4" id="3KG-oV-GWH"/>
                             <constraint firstItem="zrK-S7-u87" firstAttribute="trailing" secondItem="hJC-qb-Po3" secondAttribute="trailing" constant="14" id="9zQ-fd-qm4"/>
+                            <constraint firstItem="Qpl-1x-dNb" firstAttribute="centerX" secondItem="zrK-S7-u87" secondAttribute="centerX" id="B8h-Zf-Gcf"/>
                             <constraint firstItem="KUL-22-w8j" firstAttribute="leading" secondItem="zrK-S7-u87" secondAttribute="leading" constant="14" id="CHL-W3-Igm"/>
+                            <constraint firstItem="zrK-S7-u87" firstAttribute="trailing" secondItem="Qpl-1x-dNb" secondAttribute="trailing" constant="10" id="GKg-6O-ece"/>
                             <constraint firstItem="zrK-S7-u87" firstAttribute="bottom" secondItem="hJC-qb-Po3" secondAttribute="bottom" constant="20" id="VSa-6C-hmT"/>
+                            <constraint firstItem="Qpl-1x-dNb" firstAttribute="leading" secondItem="zrK-S7-u87" secondAttribute="leading" constant="10" id="ZMR-Mw-reB"/>
+                            <constraint firstItem="l76-wF-qlB" firstAttribute="leading" secondItem="KUL-22-w8j" secondAttribute="leading" id="e4I-0L-Jy9"/>
                             <constraint firstItem="zrK-S7-u87" firstAttribute="trailing" secondItem="KUL-22-w8j" secondAttribute="trailing" constant="14" id="mBd-RO-KtS"/>
+                            <constraint firstItem="l76-wF-qlB" firstAttribute="top" secondItem="KUL-22-w8j" secondAttribute="bottom" constant="140" id="sxJ-ZG-dRI"/>
                             <constraint firstItem="hJC-qb-Po3" firstAttribute="leading" secondItem="zrK-S7-u87" secondAttribute="leading" constant="14" id="vMH-DM-uIY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zrK-S7-u87"/>
@@ -53,11 +72,12 @@
                     <connections>
                         <outlet property="deleteButton" destination="hJC-qb-Po3" id="j6D-D5-jhe"/>
                         <outlet property="itemNameLabel" destination="KUL-22-w8j" id="Mks-Xg-zjl"/>
+                        <outlet property="quantityCounterView" destination="Qpl-1x-dNb" id="hI0-tj-tXi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8C-42-pnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

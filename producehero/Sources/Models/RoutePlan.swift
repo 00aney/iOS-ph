@@ -16,6 +16,19 @@ struct RoutePlan {
   let address: String
   let orderItems: [OrderItem]
   let userId: String
-  var isSigned: Bool
-  var signImage: UIImage?
+  let isSigned: Bool
+  let signImage: UIImage?
+}
+
+
+extension RoutePlan {
+  init(routePlan: RoutePlan, orderItems: [OrderItem]? = nil, isSigned: Bool? = nil, signImage: UIImage? = nil) {
+    id = routePlan.id
+    name = routePlan.name
+    address = routePlan.address
+    self.orderItems = orderItems ?? routePlan.orderItems
+    userId = routePlan.userId
+    self.isSigned = isSigned ?? routePlan.isSigned
+    self.signImage = signImage ?? routePlan.signImage
+  }
 }

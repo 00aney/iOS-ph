@@ -19,7 +19,7 @@ struct OrderItem {
 
 
 extension OrderItem {
-  init(orderItem: OrderItem, quantity: Int?) {
+  init(orderItem: OrderItem, quantity: Int? = nil) {
      id = orderItem.id
      name = orderItem.name
      weight = orderItem.weight
