@@ -9,7 +9,12 @@
 import UIKit
 
 final class RoutePlanViewController: UIViewController {
+  
+  // MARK: Constants
+  
+  let rowHeight: CGFloat = 80
 
+  
   // MARK: Properties
   
   var routeName: String = ""
@@ -60,7 +65,6 @@ extension RoutePlanViewController: UITableViewDelegate {
       orderItems: routePlan.orderItems
     ).initialViewController()
     
-    // MARK: signCompletionHandler
     orderViewController.signCompletionHandler = { [weak self] (routePlanId, signImage) in
       guard let self = self else { return }
       
@@ -77,7 +81,7 @@ extension RoutePlanViewController: UITableViewDelegate {
     }
     
     orderViewController.orderChangeHandler = { [weak self] (routePlanId, orderItems) in
-      guard let self = self else{ return }
+      guard let self = self else { return }
       if let index = self.routePlans.firstIndex(where: { $0.id == routePlanId }) {
         let routePlan = RoutePlan(routePlan: self.routePlans[index], orderItems: orderItems)
         self.routePlans.remove(at: index)
@@ -123,7 +127,7 @@ extension RoutePlanViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
+    return rowHeight
   }
 }
 

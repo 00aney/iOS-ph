@@ -13,7 +13,6 @@ final class SignOrderViewController: UIViewController {
   // MARK: Properties
   
   var totalPrice: Double = 0.0
-  
   var signCompletionHandler: ((UIImage) -> Void)?
   
   

@@ -10,6 +10,11 @@ import UIKit
 
 final class CanvasView: UIView {
   
+  // MARK: Constants
+  
+  let lineWidth: CGFloat = 8
+  
+  
   // MARK: Properties
   
   fileprivate var lines: [[CGPoint]] = []
@@ -22,7 +27,7 @@ final class CanvasView: UIView {
     guard let context = UIGraphicsGetCurrentContext() else { return }
     
     context.setStrokeColor(UIColor.black.cgColor)
-    context.setLineWidth(8)
+    context.setLineWidth(lineWidth)
     context.setLineCap(.butt)
     
     lines.forEach { (line) in
@@ -55,7 +60,7 @@ final class CanvasView: UIView {
   }
   
   
-  // public functions
+  // MARK: Public Functions
   
   func clear() {
     lines.removeAll()

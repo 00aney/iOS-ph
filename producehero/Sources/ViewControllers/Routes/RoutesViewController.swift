@@ -10,10 +10,14 @@ import UIKit
 
 final class RoutesViewController: UIViewController {
 
+  // MARK: Constants
+  
+  let rowHeight: CGFloat = 40
+  
+  
   // MARK: Properties
   
   var routeService: RouteServiceProtocol!
-  
   var user: User? = nil
   var routes: [Route] = []
   
@@ -116,7 +120,7 @@ extension RoutesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
+    return rowHeight
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

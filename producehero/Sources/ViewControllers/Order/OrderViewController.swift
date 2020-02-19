@@ -10,6 +10,11 @@ import UIKit
 
 final class OrderViewController: UIViewController {
 
+  // MARK: Constants
+  
+  let rowHeight: CGFloat = 80
+  
+  
   // MARK: Properties
   
   var routePlanId: String = ""
@@ -63,8 +68,6 @@ final class OrderViewController: UIViewController {
       guard let signCompletionHandler = self.signCompletionHandler else { return }
       
       self.isSigned = true
-      
-      // TODO: pass new routePlan instance
       signCompletionHandler(self.routePlanId, image)
     }
     SignOrderViewController.modalPresentationStyle = .fullScreen
@@ -99,7 +102,6 @@ extension OrderViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "OrderItemCell", for: indexPath) as! OrderItemCell
     
     cell.configure(orderItems[indexPath.row], isSigned: isSigned)
-    // MARK: adjustButtonHandler
     cell.adjustButtonHandler = { [weak self] (cell) in
       guard let self = self else { return }
       
@@ -136,7 +138,7 @@ extension OrderViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
+    return rowHeight
   }
   
 }
